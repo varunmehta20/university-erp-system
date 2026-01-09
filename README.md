@@ -152,14 +152,14 @@ ERP/
 │   │   └── ERPConnector.java
 │   │
 │   ├── ui/
-│   │   ├── Admin/
-│   │   ├── Instructor/
-│   │   ├── Student/
-│   │   ├── ERPMain.java
-│   │   ├── LoginFrame.java
-│   │   └── RoleRouter.java
-│   │
-│   └── Main.java
+│      ├── Admin/
+│      ├── Instructor/
+│      ├── Student/
+│      ├── ERPMain.java
+│      ├── LoginFrame.java
+│      └── RoleRouter.java
+│   
+│  
 │
 └── README.md
 
