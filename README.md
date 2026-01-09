@@ -89,6 +89,54 @@ This ensures **clean separation of concerns**, **scalability**, and **maintainab
 - **IDE:** IntelliJ IDEA  
 
 ---
+## 🛠️ How to Run
+
+### 1️⃣ Requirements
+
+- Java JDK 17 or JDK 21  
+- IntelliJ IDEA (Community / Ultimate)  
+- MySQL Server 8.x  
+- MySQL Connector (JDBC)  
+- jBCrypt library  
+
+---
+
+### 2️⃣ Database Setup
+
+The project uses **two MySQL databases**:
+
+#### 🔐 Auth Database
+
+Stores login credentials & roles
+
+**Table:**  
+- `users_auth`
+
+#### 🎓 ERP Database (`univ_erp`)
+
+**Tables:**  
+- `students`  
+- `instructors`  
+- `courses`  
+- `sections`  
+- `enrollments`  
+- `grades`  
+- `assessment_components`  
+- `settings`  
+- `notification`  
+- `section_labels`  
+
+---
+
+### 3️⃣ Database Configuration
+
+Update the following fields in connector classes:
+
+```java
+private static final String URL  = "jdbc:mysql://localhost:3306/authen_db";
+private static final String USER = "root";
+private static final String PASS = "your_mysql_password";
+
 
 ## 🗂️ Project Structure
 
@@ -115,55 +163,4 @@ ERP/
 │   └── Main.java
 │
 └── README.md
-
-## 🛠️ How to Run
-
----
-
-### 1️⃣ Requirements
-
-- Java JDK 17 or JDK 21  
-- IntelliJ IDEA (Community / Ultimate)  
-- MySQL Server 8.x  
-- MySQL Connector (JDBC)  
-- jBCrypt library  
-
----
-
-### 2️⃣ Database Setup
-
-The project uses **two MySQL databases**:
-
-#### 🔐 Auth Database
-
-Stores login credentials & roles
-
-**Table:**
-- `users_auth`
-
-#### 🎓 ERP Database (`univ_erp`)
-
-**Tables:**
-- `students`
-- `instructors`
-- `courses`
-- `sections`
-- `enrollments`
-- `grades`
-- `assessment_components`
-- `settings`
-- `notification`
-- `section_labels`
-
----
-
-### 3️⃣ Database Configuration
-
-Update the following fields in connector classes:
-
-```java
-private static final String URL  = "jdbc:mysql://localhost:3306/authen_db";
-private static final String USER = "root";
-private static final String PASS = "your_mysql_password";
-
 
