@@ -132,7 +132,6 @@ Stores login credentials & roles
 
 Update the following fields in connector classes:
 
-```java
 private static final String URL  = "jdbc:mysql://localhost:3306/authen_db";
 private static final String USER = "root";
 private static final String PASS = "your_mysql_password";
